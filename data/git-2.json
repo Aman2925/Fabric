@@ -30,7 +30,7 @@
         "p_sink_file" : "AdventureWorks_Sales_2016.cvsv"
     },
     {
-        "p_rel_url" : "aAman2925/Fabric/refs/heads/main/data/AdventureWorks_Sales_2017.csv",
+        "p_rel_url" : "Aman2925/Fabric/refs/heads/main/data/AdventureWorks_Sales_2017.csv",
         "p_sink_folder" : "AdventureWorks_Sales_2017",
         "p_sink_file" : "AdventureWorks_Sales_2017.csv"
     },
