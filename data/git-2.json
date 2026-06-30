@@ -1,6 +1,6 @@
 [
     {
-        "p_rel_url" : "anshlambagit/Fabric-Tutorial/refs/heads/main/Data/AdventureWorks_Product_Categories.csv",
+        "p_rel_url" : "Aman2925/Fabric/refs/heads/main/data/AdventureWorks_Product_Categories.csv",
         "p_sink_folder" : "AdventureWorks_Product_Categories",
         "p_sink_file" : "AdventureWorks_Product_Categories.csv"
     },
