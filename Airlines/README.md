@@ -159,3 +159,270 @@ The project consists of six interconnected datasets that simulate real-world air
 | 💻 GitHub Repository | *(Add your GitHub repository link here)* |
 
 ---
+
+
+# 🏭 Data Engineering Workflow
+
+The project follows the **Medallion Architecture** to progressively improve data quality and prepare trusted datasets for business reporting.
+
+The architecture is divided into three layers:
+
+| Layer | Purpose |
+|--------|---------|
+| 🥉 Bronze | Store raw source data without modification |
+| 🥈 Silver | Clean, validate and standardize the datasets |
+| 🥇 Gold | Create a business-ready semantic model for reporting |
+
+---
+
+# 🐍 Synthetic Dataset Generation
+
+Since publicly available airline datasets rarely contain all the entities required for an end-to-end analytics solution, a complete synthetic data generation framework was developed in Python.
+
+Each dataset was generated independently while maintaining realistic relationships across entities such as flights, bookings, aircraft, airports, maintenance records and weather conditions.
+
+### Generated Datasets
+
+| Dataset | Description |
+|----------|-------------|
+| Flights | Flight schedules, delays, cancellations, operational metrics |
+| Bookings | Passenger bookings, fares, ticket classes and booking channels |
+| Aircraft | Fleet information including aircraft models and operational details |
+| Maintenance | Maintenance history, repair duration and maintenance costs |
+| Weather | Airport weather observations including visibility, wind speed and temperature |
+| Airports | Airport master data used across the project |
+
+The data generation scripts are available inside the **Dataset-Generator** folder.
+
+---
+
+# 🥉 Bronze Layer – Raw Data Ingestion
+
+The first stage of the pipeline loads raw CSV datasets into the Microsoft Fabric Lakehouse without applying any transformations.
+
+### Objectives
+
+- Preserve the original source data
+- Maintain schema consistency
+- Create a landing zone for downstream processing
+- Support data lineage and traceability
+
+### Bronze Layer Workflow
+
+```text
+Python Generator
+        │
+        ▼
+Raw CSV Files
+        │
+        ▼
+Microsoft Fabric Lakehouse
+        │
+        ▼
+Bronze Tables
+```
+
+### Bronze Layer Components
+
+- Lakehouse
+- OneLake Storage
+- Raw CSV Files
+- Spark Notebook
+
+---
+
+## 📸 Bronze Layer
+
+> **Insert Bronze Lakehouse Screenshot Here**
+
+---
+
+# 🥈 Silver Layer – Data Validation & Transformation
+
+The Silver layer is responsible for transforming raw operational data into clean, reliable datasets suitable for analytics.
+
+Apache Spark notebooks were used to perform data validation, cleansing and standardization.
+
+Unlike simple ETL pipelines, each dataset was validated using business-specific rules before being promoted to the Silver layer.
+
+---
+
+## 🔍 Data Quality Validation
+
+The following validation rules were implemented throughout the pipeline.
+
+### ✅ Null Value Validation
+
+Missing values were identified and handled appropriately to ensure complete business reporting.
+
+---
+
+### ✅ Duplicate Detection
+
+Duplicate records were detected and removed to eliminate reporting inconsistencies.
+
+---
+
+### ✅ Data Type Standardization
+
+Columns were converted into their appropriate data types including:
+
+- Integer
+- Decimal
+- Date
+- Timestamp
+- Boolean
+
+---
+
+### ✅ Date Validation
+
+Date formats were standardized across all datasets to ensure consistent temporal analysis.
+
+---
+
+### ✅ Business Rule Validation
+
+Several business rules were applied during validation, including:
+
+- Negative delay values removed
+- Invalid timestamps corrected
+- Invalid maintenance records filtered
+- Incorrect operational values identified
+- Flight status validation
+- Weather consistency validation
+
+---
+
+### ✅ Error Logging
+
+Instead of silently removing invalid records, dedicated validation tables were created to capture rejected records for auditing purposes.
+
+Example:
+
+- flights_validationerrors
+- bookings_validation_errors
+- maintenance_validation_errors
+- weather_validation_errors
+- aircraft_validationerrors
+
+This approach improves transparency while maintaining clean analytical datasets.
+
+---
+
+## Silver Layer Workflow
+
+```text
+Bronze Tables
+        │
+        ▼
+Spark Validation Notebook
+        │
+        ▼
+Data Cleansing
+        │
+        ▼
+Business Rule Validation
+        │
+        ▼
+Delta Tables
+```
+
+---
+
+## 📸 Validation Notebook
+
+> **Insert Spark Validation Notebook Screenshot**
+
+---
+
+## 📸 Silver Layer
+
+> **Insert Silver Lakehouse Screenshot**
+
+---
+
+# 🥇 Gold Layer – Business Modeling
+
+After completing data validation, the cleaned Delta Tables were promoted into the Gold layer for reporting.
+
+The Gold layer focuses on business consumption rather than data cleansing.
+
+### Gold Layer Activities
+
+- Semantic Model Creation
+- Relationship Modeling
+- Business-Friendly Schema
+- Optimized Data Types
+- DAX Measures
+- Report Performance Optimization
+
+The Gold layer serves as the single source of truth for Power BI reporting.
+
+---
+
+## Semantic Model
+
+The Semantic Model provides a centralized business layer by defining relationships between operational entities.
+
+Key benefits include:
+
+- Simplified report development
+- Reusable business measures
+- Faster dashboard performance
+- Consistent business logic
+
+---
+
+## 📸 Semantic Model
+
+> **Insert Semantic Model Screenshot**
+
+---
+
+# 🔄 Microsoft Fabric Pipeline
+
+A Microsoft Fabric Data Pipeline was designed to orchestrate the complete workflow from data ingestion to analytical consumption.
+
+The pipeline ensures a structured execution sequence and supports reproducible processing.
+
+Pipeline Stages:
+
+1. Raw Data Ingestion
+2. Bronze Layer Storage
+3. Spark Validation Notebook
+4. Silver Delta Tables
+5. Semantic Model Refresh
+6. Power BI Reporting
+
+---
+
+## 📸 Fabric Pipeline
+
+> **Insert Pipeline Screenshot**
+
+---
+
+# ✅ End-to-End Workflow
+
+```text
+Python Scripts
+      │
+      ▼
+Raw CSV Files
+      │
+      ▼
+Bronze Lakehouse
+      │
+      ▼
+Spark Validation Notebook
+      │
+      ▼
+Silver Delta Tables
+      │
+      ▼
+Semantic Model
+      │
+      ▼
+Power BI Dashboard
+```
