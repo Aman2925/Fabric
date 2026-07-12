@@ -615,6 +615,7 @@ This dashboard analyzes maintenance activities, maintenance costs and aircraft p
 ![Maintenance Tooltip 1](Assets/Tooltips/Maintenance%20Tooltip.png)
 
 ![Maintenance Tooltip 2](Assets/Tooltips/Maintenance%20Tooltip-2.png)
+
 ---
 
 # ✨ Advanced Power BI Features
