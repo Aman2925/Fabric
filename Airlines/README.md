@@ -59,71 +59,28 @@ From **Synthetic Data Generation** → **Bronze Layer** → **Spark Validation**
 
 </div>
 
----
-
-# 📌 About This Project
-
-Modern airline operations generate enormous volumes of operational data across multiple systems including flight operations, aircraft maintenance, passenger bookings and weather monitoring.
-
-This project demonstrates how those independent datasets can be transformed into a centralized analytics platform using **Microsoft Fabric's Medallion Architecture**.
-
-Unlike traditional dashboard-only projects, this solution covers the complete analytics lifecycle—from raw data generation to executive business reporting.
 
 ---
 
-## 🎯 Project Objectives
+# 📑 Table of Contents
 
-✔ Generate realistic airline operational datasets using Python
-
-✔ Build a scalable Microsoft Fabric Lakehouse
-
-✔ Validate and cleanse raw data using Apache Spark
-
-✔ Transform validated data into Delta Tables
-
-✔ Build a Warehouse & Semantic Model
-
-✔ Design an interactive executive Power BI dashboard
-
-✔ Deliver actionable business insights through modern analytics
-
----
-
-# 📊 Project at a Glance
-
-| Category | Details |
-|-----------|---------|
-| 🚀 Project Type | End-to-End Data Engineering & BI |
-| 🏗 Architecture | Medallion (Bronze → Silver → Gold) |
-| 🐍 Language | Python |
-| ⚡ Processing | Apache Spark (PySpark) |
-| 💾 Storage | Microsoft OneLake |
-| 📊 Visualization | Power BI |
-| 🧠 Semantic Layer | Microsoft Fabric Semantic Model |
-| 🛢 Database | Fabric Warehouse |
-| 📅 Data Volume | 920,000+ Generated Records |
-| 📈 Dashboard Pages | 4 |
-| 💡 Interactive Tooltips | Yes |
-| 📊 DAX Measures | 40+ |
+- [Project Overview](#-project-overview)
+- [Business Problem](#-business-problem)
+- [Solution Architecture](#️-solution-architecture)
+- [Synthetic Dataset Generation](#-synthetic-dataset-generation)
+- [Bronze Layer](#-bronze-layer--raw-data-ingestion)
+- [Silver Layer](#-silver-layer--data-validation--transformation)
+- [Warehouse](#-microsoft-fabric-warehouse)
+- [Semantic Model](#-semantic-model-gold-layer)
+- [Fabric Pipeline](#-microsoft-fabric-data-pipeline)
+- [Dashboard Showcase](#-executive-dashboard-showcase)
+- [Repository Structure](#-repository-structure)
+- [Getting Started](#-getting-started)
+- [Future Improvements](#-future-improvements)
+- [Author](#-author)
 
 ---
 
-# 🖼 Project Preview
-
-> **Click any dashboard below to view it in full resolution.**
-
-| Executive Overview | Passenger Analytics |
-|:------------------:|:-------------------:|
-| <a href="Assets/Dashboard/Overview.png"><img src="Assets/Dashboard/Overview.png" width="500"></a> | <a href="Assets/Dashboard/Passenger.png"><img src="Assets/Dashboard/Passenger.png" width="500"></a> |
-
-| Weather Analytics | Aircraft & Maintenance |
-|:------------------:|:----------------------:|
-| <a href="Assets/Dashboard/Weather.png"><img src="Assets/Dashboard/Weather.png" width="500"></a> | <a href="Assets/Dashboard/Maintenance.png"><img src="Assets/Dashboard/Maintenance.png" width="500"></a> |
-
----
-
-
----
 
 # 📌 Project Overview
 
