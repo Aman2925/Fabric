@@ -4,18 +4,41 @@
 ### Microsoft Fabric • Apache Spark • Lakehouse • Semantic Model • Power BI
 
 <p align="center">
+  <a href="https://learn.microsoft.com/fabric/" target="_blank">
+    <img src="https://img.shields.io/badge/Microsoft%20Fabric-6B2FB3?style=for-the-badge&logo=microsoft&logoColor=white" />
+  </a>
 
-![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-6F2DBD?style=for-the-badge)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
-![Delta Lake](https://img.shields.io/badge/Delta_Lake-0A84FF?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PySpark](https://img.shields.io/badge/PySpark-F37221?style=for-the-badge&logo=apachespark&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge)
-![DAX](https://img.shields.io/badge/DAX-1F77B4?style=for-the-badge)
-![Lakehouse](https://img.shields.io/badge/Lakehouse-0078D4?style=for-the-badge)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)
+  <a href="https://powerbi.microsoft.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
+  </a>
 
+  <a href="https://spark.apache.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" />
+  </a>
+
+  <a href="https://delta.io/" target="_blank">
+    <img src="https://img.shields.io/badge/Delta%20Lake-0078D4?style=for-the-badge&logo=databricks&logoColor=white" />
+  </a>
+
+  <a href="https://www.python.org/doc/" target="_blank">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  </a>
+
+  <a href="https://spark.apache.org/docs/latest/api/python/" target="_blank">
+    <img src="https://img.shields.io/badge/PySpark-F57C00?style=for-the-badge&logo=apachespark&logoColor=white" />
+  </a>
+
+  <a href="https://learn.microsoft.com/sql/" target="_blank">
+    <img src="https://img.shields.io/badge/SQL-0B5CAD?style=for-the-badge" />
+  </a>
+
+  <a href="https://learn.microsoft.com/dax/" target="_blank">
+    <img src="https://img.shields.io/badge/DAX-1F77B4?style=for-the-badge" />
+  </a>
+
+  <a href="https://learn.microsoft.com/fabric/data-engineering/lakehouse-overview" target="_blank">
+    <img src="https://img.shields.io/badge/Lakehouse-1976D2?style=for-the-badge" />
+  </a>
 </p>
 
 ---
