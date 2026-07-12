@@ -154,10 +154,9 @@ The project consists of six interconnected datasets that simulate real-world air
 
 | Resource | Link |
 |----------|------|
-| 📦 Raw Dataset | *(Add your Google Drive Raw Dataset link here)* |
-| 📊 Power BI (.pbix) | *(Add your PBIX Google Drive link here)* |
-| 💻 GitHub Repository | *(Add your GitHub repository link here)* |
-
+| 📦 Raw Dataset | https://drive.google.com/drive/folders/126ZXwdeAf4wsEgiyyLBDwlhtFlwK85wo?usp=share_link |
+| 📊 Power BI (.pbix) | https://drive.google.com/file/d/1x7vI15eSXiRrgIDxaaebuZy7Z-3y4LYO/view?usp=sharing |
+| 💻 GitHub Repository | https://github.com/Aman2925/Fabric/tree/main/Airlines |
 ---
 
 
