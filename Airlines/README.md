@@ -70,6 +70,26 @@ The final solution enables operational reporting, KPI monitoring and business de
 
 ---
 
+---
+
+# 📑 Table of Contents
+
+- [🏗️ Project Architecture](#️-project-architecture)
+- [📂 Project Folder Structure](#-project-folder-structure)
+- [⚙️ Technology Stack](#️-technology-stack)
+- [🔄 Data Pipeline](#-data-pipeline)
+- [🥉 Bronze Layer](#-bronze-layer)
+- [🥈 Silver Layer](#-silver-layer)
+- [📓 Spark Notebook](#-spark-notebook)
+- [🧠 Semantic Model](#-semantic-model)
+- [📊 Power BI Dashboard](#-power-bi-dashboard)
+- [💡 Interactive Tooltips](#-interactive-tooltips)
+- [✨ Advanced Power BI Features](#-advanced-power-bi-features)
+- [📈 Future Improvements](#-future-improvements)
+
+--- 
+
+
 # 🎯 Business Problem
 
 Airline operations rely on data coming from multiple independent systems.
@@ -502,7 +522,19 @@ It enables business users to quickly monitor operational KPIs, airport performan
 
 ## 📸 Executive Overview
 
-![Executive Overview](Assets/Dashboard/Overview.png)
+<a id="executive-overview"></a>
+
+## 🏠 Executive Overview
+
+<p align="center">
+<a href="Assets/Dashboard/Overview.png">
+<img src="Assets/Dashboard/Overview.png" width="1000">
+</a>
+</p>
+
+<p align="right">
+<a href="#-table-of-contents">⬆ Back to Top</a>
+</p>
 
 ---
 
