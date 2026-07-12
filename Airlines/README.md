@@ -232,7 +232,11 @@ Bronze Tables
 
 ## 📸 Bronze Layer
 
-> **Insert Bronze Lakehouse Screenshot Here**
+![Bronze Layer 1](Assets/BronzeLayer/Bronze%20Layer.png)
+
+![Bronze Layer 2](Assets/BronzeLayer/Bronze%20Layer2.png)
+
+![Bronze Layer 3](Assets/BronzeLayer/Bronze%20Layer3.png)
 
 ---
 
@@ -331,13 +335,17 @@ Delta Tables
 
 ## 📸 Validation Notebook
 
-> **Insert Spark Validation Notebook Screenshot**
+![Validation Notebook](Assets/Notebook/NotebookImages.png)
 
 ---
 
 ## 📸 Silver Layer
 
-> **Insert Silver Lakehouse Screenshot**
+![Silver Layer 1](Assets/SilverLayer/SilverLayer.png)
+
+![Silver Layer 2](Assets/SilverLayer/SilverLayer2.png)
+
+![Silver Layer 3](Assets/SilverLayer/SilverLayer3.png)
 
 ---
 
@@ -375,7 +383,7 @@ Key benefits include:
 
 ## 📸 Semantic Model
 
-> **Insert Semantic Model Screenshot**
+![Semantic Model](Assets/Semantic%20Model/Semantic%20Model%20.png)
 
 ---
 
@@ -398,7 +406,9 @@ Pipeline Stages:
 
 ## 📸 Fabric Pipeline
 
-> **Insert Pipeline Screenshot**
+![Pipeline - Raw Data Loading](Assets/Pipeline/Loading%20Raw%20Data%20from%20local%20folder%20to%20data%20lakehouse%20pipeline.png)
+
+![Pipeline - Lakehouse to Warehouse](Assets/Pipeline/Data%20Lakehouse%20to%20Data%20Warehouse%20pipeline.png)
 
 ---
 
@@ -469,7 +479,7 @@ It enables business users to quickly monitor operational KPIs, airport performan
 
 ## 📸 Executive Overview
 
-> *(Insert Overview Dashboard Screenshot)*
+![Executive Overview](Assets/Dashboard/Overview.png)
 
 ---
 
@@ -507,13 +517,15 @@ The dashboard enables commercial teams to analyze ticket sales, booking channels
 
 ## 📸 Passenger & Booking Dashboard
 
-> *(Insert Passenger Dashboard Screenshot)*
+![Passenger Dashboard](Assets/Dashboard/Passenger.png)
 
 ---
 
 ## 📸 Interactive Tooltip
 
-> *(Insert Passenger Tooltip Screenshot)*
+![Booking Tooltip 1](Assets/Tooltips/Booking%20Tooltip-1.png)
+
+![Booking Tooltip 2](Assets/Tooltips/Booking%20Tooltip-2.png)
 
 ---
 
@@ -549,13 +561,15 @@ This dashboard evaluates how weather affects delays, cancellations and operation
 
 ## 📸 Weather Dashboard
 
-> *(Insert Weather Dashboard Screenshot)*
+![Weather Dashboard](Assets/Dashboard/Weather.png)
 
 ---
 
 ## 📸 Interactive Tooltip
 
-> *(Insert Weather Tooltip Screenshot)*
+![Weather Tooltip 1](Assets/Tooltips/Weather%20Tooltip.png)
+
+![Weather Tooltip 2](Assets/Tooltips/Weather%20Tooltip-2.png)
 
 ---
 
@@ -592,14 +606,13 @@ This dashboard analyzes maintenance activities, maintenance costs and aircraft p
 
 ## 📸 Aircraft & Maintenance Dashboard
 
-> *(Insert Maintenance Dashboard Screenshot)*
+![Maintenance Dashboard](Assets/Dashboard/Maintenance.png)
 
 ---
 
 ## 📸 Interactive Tooltip
 
-> *(Insert Maintenance Tooltip Screenshot)*
-
+![Maintenance Tooltip](Assets/Tooltips/Maintenance%20Tooltip.png)
 ---
 
 # ✨ Advanced Power BI Features
