@@ -227,3 +227,283 @@ Click any dashboard image to view it in full resolution.
 | 💻 GitHub Repository | https://github.com/Aman2925/Fabric/tree/main/Airlines |
 
 ---
+
+---
+
+# 🏗️ Solution Architecture
+
+The project follows the **Medallion Architecture** to progressively improve data quality and prepare trusted datasets for enterprise reporting.
+
+The complete data flow is illustrated below.
+
+```text
+                           Python Dataset Generator
+                                      │
+                                      ▼
+                          Raw CSV Datasets
+                                      │
+                                      ▼
+                 Microsoft Fabric Data Pipeline
+                                      │
+                                      ▼
+                         Bronze Layer (Lakehouse)
+                                      │
+                                      ▼
+                 Apache Spark Validation Notebook
+          ├── Null Validation
+          ├── Duplicate Detection
+          ├── Data Type Standardization
+          ├── Business Rule Validation
+          └── Error Logging
+                                      │
+                                      ▼
+                     Silver Layer (Delta Tables)
+                                      │
+                                      ▼
+                    Microsoft Fabric Warehouse
+                                      │
+                                      ▼
+                    Semantic Model (Gold Layer)
+                                      │
+                                      ▼
+                Interactive Power BI Dashboard
+```
+
+---
+
+# ⚙️ End-to-End Workflow
+
+```text
+Python
+   │
+   ▼
+Synthetic Dataset Generation
+   │
+   ▼
+CSV Files
+   │
+   ▼
+Microsoft Fabric Lakehouse
+   │
+   ▼
+Bronze Layer
+   │
+   ▼
+Spark Validation Notebook
+   │
+   ▼
+Silver Delta Tables
+   │
+   ▼
+Warehouse
+   │
+   ▼
+Semantic Model
+   │
+   ▼
+Power BI Dashboard
+```
+
+---
+
+# 🐍 Synthetic Dataset Generation
+
+Unlike traditional analytics projects that rely on publicly available datasets, this project begins with a custom-built Python data generation framework.
+
+The generator creates interconnected datasets that simulate real-world airline operations while preserving realistic business relationships across all entities.
+
+### Generated Datasets
+
+| Dataset | Description |
+|----------|-------------|
+| ✈️ Flights | Flight schedules, delays, cancellations and operational metrics |
+| 🎟️ Bookings | Passenger reservations, ticket class and fare information |
+| 🛩️ Aircraft | Fleet information and aircraft specifications |
+| 🔧 Maintenance | Maintenance history, repair duration and maintenance costs |
+| 🌦️ Weather | Airport weather conditions affecting flight operations |
+| 🌍 Airports | Airport master data and location information |
+
+The Python scripts are available inside the **Script** directory.
+
+---
+
+# 🥉 Bronze Layer — Raw Data Ingestion
+
+The Bronze Layer serves as the landing zone for all raw operational datasets.
+
+No transformations are applied during ingestion. This ensures complete traceability and preserves the original source data for auditing and validation.
+
+### Bronze Layer Responsibilities
+
+- Store raw CSV files
+- Preserve original source records
+- Maintain data lineage
+- Support downstream transformations
+
+### Technologies Used
+
+- Microsoft Fabric Lakehouse
+- OneLake
+- Data Pipeline
+- Apache Spark
+
+---
+
+## 📸 Bronze Layer
+
+![Bronze Layer 1](Assets/BronzeLayer/Bronze%20Layer.png)
+
+![Bronze Layer 2](Assets/BronzeLayer/Bronze%20Layer2.png)
+
+![Bronze Layer 3](Assets/BronzeLayer/Bronze%20Layer3.png)
+
+---
+
+# 🥈 Silver Layer — Data Validation & Transformation
+
+The Silver Layer transforms raw operational data into clean, reliable datasets suitable for analytical reporting.
+
+Apache Spark notebooks were used to implement validation rules, standardize schemas and enforce business logic before loading the data into Delta Tables.
+
+---
+
+## 🔍 Data Quality Validation
+
+The following validation rules were implemented across multiple datasets.
+
+### ✅ Null Value Validation
+
+Missing values were identified and handled to improve reporting quality.
+
+---
+
+### ✅ Duplicate Detection
+
+Duplicate records were identified and removed.
+
+---
+
+### ✅ Data Type Standardization
+
+Columns were converted into appropriate data types including:
+
+- Integer
+- Decimal
+- Boolean
+- Date
+- Timestamp
+
+---
+
+### ✅ Date Validation
+
+Date formats were standardized across all datasets.
+
+---
+
+### ✅ Business Rule Validation
+
+Validation rules included:
+
+- Negative delay removal
+- Invalid maintenance record filtering
+- Timestamp correction
+- Flight status validation
+- Weather consistency validation
+- Operational data validation
+
+---
+
+### ✅ Validation Error Logging
+
+Invalid records were stored separately for auditing rather than being silently removed.
+
+Examples include:
+
+- flights_validationerrors
+- maintenance_validation_errors
+- aircraft_validationerrors
+- weather_validation_errors
+- bookings_validation_errors
+
+This approach improves transparency and supports future debugging.
+
+---
+
+## 📸 Validation Notebook
+
+![Validation Notebook](Assets/Notebook/NotebookImages.png)
+
+---
+
+## 📸 Silver Layer
+
+![Silver Layer 1](Assets/SilverLayer/SilverLayer.png)
+
+![Silver Layer 2](Assets/SilverLayer/SilverLayer2.png)
+
+![Silver Layer 3](Assets/SilverLayer/SilverLayer3.png)
+
+---
+
+# 🏭 Microsoft Fabric Warehouse
+
+After validation, the cleaned Delta Tables were loaded into a Microsoft Fabric Warehouse.
+
+The Warehouse provides a structured relational layer optimized for analytical workloads and acts as the primary data source for the Semantic Model.
+
+### Benefits
+
+- Optimized query performance
+- Centralized relational storage
+- Business-friendly schema
+- Enterprise reporting support
+
+---
+
+# 🧠 Semantic Model (Gold Layer)
+
+The Gold Layer exposes business-ready datasets through a Microsoft Fabric Semantic Model.
+
+The Semantic Model centralizes business logic and enables reusable measures across Power BI reports.
+
+### Semantic Model Features
+
+- Defined relationships
+- Optimized star schema
+- Business-friendly naming
+- Reusable DAX measures
+- Improved report performance
+
+---
+
+## 📸 Semantic Model
+
+![Semantic Model](Assets/Semantic%20Model/Semantic%20Model%20.png)
+
+---
+
+# 🔄 Microsoft Fabric Data Pipeline
+
+A Microsoft Fabric Data Pipeline orchestrates the complete ingestion workflow.
+
+The pipeline automates loading raw datasets into the Lakehouse and prepares them for downstream Spark processing.
+
+### Pipeline Stages
+
+1. Raw CSV Upload
+2. Bronze Layer Ingestion
+3. Spark Notebook Execution
+4. Silver Delta Table Creation
+5. Warehouse Loading
+6. Semantic Model Refresh
+
+---
+
+## 📸 Fabric Pipeline
+
+![Pipeline 1](Assets/Pipeline/Loading%20Raw%20Data%20from%20local%20folder%20to%20data%20lakehouse%20pipeline.png)
+
+![Pipeline 2](Assets/Pipeline/Data%20Lakehouse%20to%20Data%20Warehouse%20pipeline.png)
+
+---
