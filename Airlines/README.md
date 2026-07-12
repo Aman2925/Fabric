@@ -426,3 +426,302 @@ Semantic Model
       ▼
 Power BI Dashboard
 ```
+
+# 📊 Executive Dashboard Showcase
+
+The final Power BI solution consists of four interactive report pages designed to monitor airline operations from multiple business perspectives.
+
+The dashboard combines advanced DAX measures, interactive filtering, report page tooltips and executive visualizations to provide actionable insights.
+
+---
+
+# 🏠 Dashboard 1 — Executive Overview
+
+The Executive Overview page provides a high-level operational snapshot of airline performance.
+
+It enables business users to quickly monitor operational KPIs, airport performance and daily flight activity.
+
+### Key KPIs
+
+- ✈️ Total Flights
+- 👥 Total Passengers
+- 💰 Total Revenue
+- ❌ Cancelled Flights
+- ⏰ Delayed Flights
+- ✅ On-Time Performance
+
+### Business Insights
+
+- Daily operational performance
+- Airport-wise on-time performance
+- Flight delay trends
+- Operational snapshot
+- Flight level drill-down
+
+### Key Features
+
+- Dynamic KPI Cards
+- Interactive Flight Details
+- Airport Heatmap
+- Conditional Formatting
+- Interactive Filters
+
+---
+
+## 📸 Executive Overview
+
+> *(Insert Overview Dashboard Screenshot)*
+
+---
+
+# 👥 Dashboard 2 — Passenger & Booking Analytics
+
+This page focuses on passenger behaviour, booking performance and revenue generation.
+
+The dashboard enables commercial teams to analyze ticket sales, booking channels and customer booking trends.
+
+### Key KPIs
+
+- Total Passengers
+- Total Bookings
+- Booking Revenue
+- Average Ticket Price
+- Cancellation Rate
+
+### Business Insights
+
+- Passenger distribution
+- Revenue analysis
+- Booking channel performance
+- Ticket class analysis
+- Weekly booking trends
+
+### Key Visuals
+
+- Booking Heatmap
+- Revenue Matrix
+- Ticket Class Bubble Chart
+- Booking Channel Analysis
+- Booking Status Distribution
+
+---
+
+## 📸 Passenger & Booking Dashboard
+
+> *(Insert Passenger Dashboard Screenshot)*
+
+---
+
+## 📸 Interactive Tooltip
+
+> *(Insert Passenger Tooltip Screenshot)*
+
+---
+
+# 🌦 Dashboard 3 — Weather Impact Analysis
+
+Weather conditions directly influence airline operations.
+
+This dashboard evaluates how weather affects delays, cancellations and operational efficiency.
+
+### Key KPIs
+
+- Weather Affected Flights
+- Average Weather Delay
+- Average Visibility
+- Average Wind Speed
+- Average Temperature
+
+### Business Insights
+
+- Delay by weather condition
+- Weather operational impact
+- Visibility vs delay relationship
+- Flight status under different weather conditions
+
+### Key Visuals
+
+- Scatter Plot
+- Weather Delay Analysis
+- Operational Impact Chart
+- Weather Distribution
+
+---
+
+## 📸 Weather Dashboard
+
+> *(Insert Weather Dashboard Screenshot)*
+
+---
+
+## 📸 Interactive Tooltip
+
+> *(Insert Weather Tooltip Screenshot)*
+
+---
+
+# 🔧 Dashboard 4 — Aircraft & Maintenance
+
+Aircraft maintenance directly impacts operational reliability and cost.
+
+This dashboard analyzes maintenance activities, maintenance costs and aircraft performance.
+
+### Key KPIs
+
+- Total Aircraft
+- Maintenance Events
+- Maintenance Cost
+- Average Repair Duration
+- Average Cost per Event
+
+### Business Insights
+
+- Costliest aircraft
+- Maintenance trends
+- Maintenance type distribution
+- Aircraft maintenance performance
+- Monthly maintenance cost
+
+### Key Visuals
+
+- Aircraft Cost Analysis
+- Maintenance Trend
+- Maintenance Type Distribution
+- Maintenance Highlights
+
+---
+
+## 📸 Aircraft & Maintenance Dashboard
+
+> *(Insert Maintenance Dashboard Screenshot)*
+
+---
+
+## 📸 Interactive Tooltip
+
+> *(Insert Maintenance Tooltip Screenshot)*
+
+---
+
+# ✨ Advanced Power BI Features
+
+The report incorporates several advanced Power BI techniques beyond standard visualizations.
+
+## Interactive Features
+
+- Dynamic KPI Cards
+- Interactive Report Page Tooltips
+- Cross Filtering
+- Dynamic Titles
+- Executive Navigation Panel
+- Slicer Synchronization
+- Conditional Formatting
+- Custom Color Themes
+
+---
+
+## Advanced DAX
+
+Implemented business measures including:
+
+- Revenue KPIs
+- On-Time Performance
+- Delay Analysis
+- Maintenance Cost Analysis
+- Dynamic Percentages
+- Average Repair Duration
+- Operational Metrics
+
+---
+
+## Visualizations Used
+
+- KPI Cards
+- Matrix
+- Heatmap
+- Scatter Plot
+- Line Chart
+- Donut Chart
+- Stacked Bar Chart
+- Bubble Chart
+- Interactive Tables
+- Custom Tooltips
+
+---
+
+# 📂 Repository Structure
+
+```text
+Airlines
+│
+├── Assets
+│   ├── Dashboard
+│   ├── Pipeline
+│   ├── Notebook
+│   ├── SemanticModel
+│   └── Architecture
+│
+├── Dataset
+│   ├── RawData
+│   └── SampleData
+│
+├── Dataset-Generator
+│   ├── aircraft.py
+│   ├── bookings.py
+│   ├── flights.py
+│   ├── maintenance.py
+│   ├── weather.py
+│   ├── config.py
+│   └── utils.py
+│
+├── Notebook
+│
+├── PowerBI
+│   └── Airline Operations Analytics.pbix
+│
+└── README.md
+```
+
+---
+
+# 📥 Downloads
+
+### 📦 Raw Dataset
+
+> https://drive.google.com/drive/folders/126ZXwdeAf4wsEgiyyLBDwlhtFlwK85wo?usp=share_link
+
+---
+
+### 📊 Power BI Dashboard (.pbix)
+
+> https://drive.google.com/file/d/1x7vI15eSXiRrgIDxaaebuZy7Z-3y4LYO/view?usp=sharing
+
+---
+
+# 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/Aman2925/Fabric.git
+```
+
+Navigate to the project folder
+
+```bash
+cd Fabric/Airlines
+```
+
+Generate the datasets
+
+```bash
+python flights.py
+python bookings.py
+python maintenance.py
+python weather.py
+python aircraft.py
+```
+
+Upload the generated CSV files into the Microsoft Fabric Lakehouse and execute the validation notebooks to create the Silver layer before connecting the Semantic Model to Power BI.
+
+---
