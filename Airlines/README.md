@@ -146,6 +146,26 @@ This project was designed with the following objectives:
 
 ---
 
+# 📊 Repository Statistics
+
+| Metric | Count |
+|---------|------:|
+| ✈️ Flights Generated | **500,000** |
+| 🎟️ Bookings Generated | **300,000** |
+| 🌦️ Weather Records | **100,000** |
+| 🔧 Maintenance Records | **20,000** |
+| 🛩️ Aircraft Records | **500** |
+| 🌍 Airport Records | **150** |
+| 📓 Spark Notebooks | **5** |
+| 📊 Dashboard Pages | **4** |
+| 📈 DAX Measures | **40+** |
+| 💡 Interactive Tooltips | **5** |
+| 🔄 Fabric Pipelines | **2** |
+| 🧱 Medallion Layers | **3** |
+
+--- 
+
+
 # 📂 Dataset Overview
 
 The project simulates real-world airline operations using interconnected datasets.
@@ -161,7 +181,9 @@ The project simulates real-world airline operations using interconnected dataset
 
 ---
 
-# 📊 Dashboard Preview
+# 📊 Executive Dashboard Preview
+
+The Power BI report consists of four dedicated dashboard pages designed for different operational domains. Each page focuses on a specific business area while maintaining consistent navigation, KPI design and interactive filtering.
 
 Click any dashboard image to view it in full resolution.
 
@@ -189,7 +211,11 @@ Click any dashboard image to view it in full resolution.
 
 # 🏗️ Solution Architecture
 
-The project follows the **Medallion Architecture** to progressively improve data quality and prepare trusted datasets for enterprise reporting.
+## 🏗️ Architecture Overview
+
+The project follows a modern enterprise analytics workflow where raw operational data is progressively transformed into trusted business-ready datasets.
+
+Each layer has a clearly defined responsibility, ensuring scalability, maintainability and high data quality throughout the analytics lifecycle.
 
 The complete data flow is illustrated below.
 
@@ -287,6 +313,8 @@ The Python scripts are available inside the **Script** directory.
 # 🥉 Bronze Layer — Raw Data Ingestion
 
 The Bronze Layer serves as the landing zone for all raw operational datasets.
+
+No business logic is applied at this stage, ensuring that the original source data remains available for auditing, reprocessing and historical reference.
 
 No transformations are applied during ingestion. This ensures complete traceability and preserves the original source data for auditing and validation.
 
