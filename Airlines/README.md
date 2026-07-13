@@ -209,7 +209,6 @@ Click any dashboard image to view it in full resolution.
 
 ---
 
-# 🏗️ Solution Architecture
 
 ## 🏗️ Architecture Overview
 
@@ -314,9 +313,7 @@ The Python scripts are available inside the **Script** directory.
 
 The Bronze Layer serves as the landing zone for all raw operational datasets.
 
-No business logic is applied at this stage, ensuring that the original source data remains available for auditing, reprocessing and historical reference.
-
-No transformations are applied during ingestion. This ensures complete traceability and preserves the original source data for auditing and validation.
+No business logic or transformations are applied at this stage, ensuring that the original source data remains available for auditing, reprocessing and historical reference.
 
 ### Bronze Layer Responsibilities
 
@@ -492,3 +489,329 @@ The pipeline automates loading raw datasets into the Lakehouse and prepares them
 ![Pipeline 2](Assets/Pipeline/Data%20Lakehouse%20to%20Data%20Warehouse%20pipeline.png)
 
 ---
+
+---
+
+# 📊 Executive Dashboard Showcase
+
+The final Power BI solution consists of four interactive report pages, each designed to analyze a different operational area of the airline business.
+
+The dashboards combine advanced DAX measures, custom report page tooltips, synchronized slicers and interactive visualizations to transform operational data into actionable business insights.
+
+---
+
+# 🏠 Dashboard 1 — Executive Overview
+
+The **Executive Overview** page provides a high-level snapshot of airline operations, enabling business users to quickly monitor key operational KPIs and overall performance.
+
+### Key Performance Indicators
+
+- ✈️ Total Flights
+- 👥 Total Passengers
+- 💰 Total Revenue
+- ❌ Cancelled Flights
+- ⏰ Delayed Flights
+- ✅ On-Time Flights
+
+### Business Questions Answered
+
+- How many flights operated during the selected period?
+- What is the overall operational performance?
+- Which airports handled the highest traffic?
+- How is on-time performance trending?
+- Which flights experienced delays?
+
+### Key Visuals
+
+- Executive KPI Cards
+- Airport Performance Heatmap
+- Daily Flight Trend
+- Flight Details Table
+- Interactive Slicers
+
+---
+
+## 📸 Executive Overview Dashboard
+
+<a href="Assets/Dashboard/Overview.png">
+<img src="Assets/Dashboard/Overview.png" width="1000">
+</a>
+
+---
+
+# 👥 Dashboard 2 — Passenger & Booking Analytics
+
+This page focuses on passenger behavior, booking trends and revenue generation.
+
+It enables business users to analyze customer booking patterns, booking channels, ticket classes and revenue performance.
+
+### Key Performance Indicators
+
+- Total Bookings
+- Total Passengers
+- Booking Revenue
+- Average Ticket Price
+- Booking Success Rate
+
+### Business Questions Answered
+
+- Which booking channels generate the most revenue?
+- Which ticket class contributes the highest sales?
+- How do booking trends change over time?
+- Which customer segments contribute the most bookings?
+
+### Key Visuals
+
+- Booking Trend Analysis
+- Revenue Distribution
+- Booking Channel Analysis
+- Ticket Class Analysis
+- Passenger Insights
+
+---
+
+## 📸 Passenger & Booking Dashboard
+
+<a href="Assets/Dashboard/Passenger.png">
+<img src="Assets/Dashboard/Passenger.png" width="1000">
+</a>
+
+### 💡 Interactive Tooltips
+
+Interactive report page tooltips provide additional booking insights without leaving the current report page.
+
+![Booking Tooltip 1](Assets/Tooltips/Booking%20Tooltip-1.png)
+
+![Booking Tooltip 2](Assets/Tooltips/Booking%20Tooltip-2.png)
+
+---
+
+# 🌦 Dashboard 3 — Weather Impact Analytics
+
+Weather conditions significantly influence airline operations.
+
+This dashboard evaluates how different weather conditions affect delays, cancellations and overall operational efficiency.
+
+### Key Performance Indicators
+
+- Weather Affected Flights
+- Average Weather Delay
+- Average Visibility
+- Average Wind Speed
+- Average Temperature
+
+### Business Questions Answered
+
+- Which weather conditions create the highest delays?
+- How does visibility impact flight punctuality?
+- What operational disruptions occur during poor weather?
+- Which airports are most affected?
+
+### Key Visuals
+
+- Weather Impact Scatter Plot
+- Delay Distribution
+- Weather Analysis
+- Flight Status Breakdown
+
+---
+
+## 📸 Weather Dashboard
+
+<a href="Assets/Dashboard/Weather.png">
+<img src="Assets/Dashboard/Weather.png" width="1000">
+</a>
+
+### 💡 Interactive Tooltips
+
+![Weather Tooltip 1](Assets/Tooltips/Weather%20Tooltip.png)
+
+![Weather Tooltip 2](Assets/Tooltips/Weather%20Tooltip-2.png)
+
+---
+
+# 🔧 Dashboard 4 — Aircraft & Maintenance Analytics
+
+Aircraft reliability directly impacts airline operational performance.
+
+This dashboard analyzes maintenance history, maintenance costs, repair duration and aircraft utilization.
+
+### Key Performance Indicators
+
+- Total Aircraft
+- Maintenance Events
+- Maintenance Cost
+- Average Repair Duration
+- Average Cost per Event
+
+### Business Questions Answered
+
+- Which aircraft incur the highest maintenance costs?
+- How frequently are maintenance activities performed?
+- Which maintenance type is most common?
+- How does maintenance impact operational efficiency?
+
+### Key Visuals
+
+- Maintenance Trend
+- Cost Analysis
+- Maintenance Type Distribution
+- Aircraft Cost Analysis
+
+---
+
+## 📸 Aircraft & Maintenance Dashboard
+
+<a href="Assets/Dashboard/Maintenance.png">
+<img src="Assets/Dashboard/Maintenance.png" width="1000">
+</a>
+
+### 💡 Interactive Tooltips
+
+![Maintenance Tooltip 1](Assets/Tooltips/Maintenance%20Tooltip.png)
+
+![Maintenance Tooltip 2](Assets/Tooltips/Maintenance%20Tooltip-2.png)
+
+---
+
+# ✨ Advanced Power BI Features
+
+The report incorporates several advanced Power BI techniques to improve usability, performance and user experience.
+
+### Reporting Features
+
+- Executive KPI Cards
+- Interactive Slicers
+- Dynamic KPI Formatting
+- Report Page Tooltips
+- Dynamic Titles
+- Conditional Formatting
+- Cross Filtering
+- Drill-through Navigation
+- Executive Dashboard Layout
+- Responsive Report Design
+
+### Advanced DAX
+
+The report uses advanced DAX measures including:
+
+- Revenue Analysis
+- On-Time Performance
+- Delay Analysis
+- Maintenance Cost Analysis
+- Dynamic Percentages
+- Running Totals
+- Month-to-Date Calculations
+- Conditional Formatting Measures
+- Dynamic Display Measures
+
+---
+
+# 📂 Repository Structure
+
+```text
+Airlines
+│
+├── Assets
+│   ├── BronzeLayer
+│   ├── Dashboard
+│   ├── Notebook
+│   ├── Pipeline
+│   ├── Semantic Model
+│   ├── SilverLayer
+│   └── Tooltips
+│
+├── Notebook
+│
+├── Script
+│
+└── README.md
+```
+
+---
+
+# 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Aman2925/Fabric.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd Fabric/Airlines
+```
+
+### 3. Generate the Datasets
+
+Execute the Python scripts inside the **Script** folder.
+
+### 4. Upload Data
+
+Upload the generated CSV files into the Microsoft Fabric Lakehouse.
+
+### 5. Execute the Notebooks
+
+Run the Spark notebooks in sequence to create the Bronze and Silver layers.
+
+### 6. Build the Warehouse
+
+Load the validated Delta Tables into the Microsoft Fabric Warehouse.
+
+### 7. Create the Semantic Model
+
+Build relationships and business measures using the Semantic Model.
+
+### 8. Open Power BI
+
+Download the PBIX file from the Project Resources section and explore the dashboards.
+
+---
+
+# 📈 Future Improvements
+
+Future enhancements planned for this project include:
+
+- Live airline operational data integration
+- Incremental Delta Lake loading
+- Microsoft Fabric Data Factory orchestration
+- Row-Level Security (RLS)
+- Power BI Service deployment
+- GitHub Actions CI/CD pipeline
+- Microsoft Purview integration
+- Power Automate KPI alerts
+
+---
+
+# 👨‍💻 Author
+
+## Aman Shah
+
+**B.Tech Electronics & Computer Science**
+
+Aspiring Data Engineer passionate about building modern analytics platforms using Microsoft Fabric, Apache Spark, Python and Power BI.
+
+### Connect With Me
+
+- 🔗 GitHub: https://github.com/Aman2925
+- 💼 LinkedIn: https://www.linkedin.com/in/aman-shah-546775255/
+
+---
+
+# 🙏 Acknowledgements
+
+Special thanks to the Microsoft Fabric ecosystem and the Power BI community for providing excellent learning resources that helped shape this project.
+
+---
+
+<div align="center">
+
+## ⭐ If you found this project helpful, please consider giving it a Star!
+
+It helps support future open-source projects and motivates continued learning and development.
+
+### Thank you for visiting this repository!
+
+</div>
