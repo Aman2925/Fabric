@@ -201,9 +201,9 @@ Click any dashboard image to view it in full resolution.
 
 | Resource | Link |
 |----------|------|
-| 📦 Raw Dataset | https://drive.google.com/drive/folders/126ZXwdeAf4wsEgiyyLBDwlhtFlwK85wo?usp=share_link |
-| 📊 Power BI (.pbix) | https://drive.google.com/file/d/1x7vI15eSXiRrgIDxaaebuZy7Z-3y4LYO/view?usp=sharing |
-| 💻 GitHub Repository | https://github.com/Aman2925/Fabric/tree/main/Airlines |
+| 📦 Raw Dataset | [Download Dataset](https://drive.google.com/...) |
+| 📊 Power BI (.pbix) | [Download PBIX](https://drive.google.com/...) |
+| 💻 GitHub Repository | [View Repository](https://github.com/Aman2925/Fabric/tree/main/Airlines) |
 
 ---
 
@@ -498,6 +498,8 @@ The final Power BI solution consists of four interactive report pages, each desi
 
 The dashboards combine advanced DAX measures, custom report page tooltips, synchronized slicers and interactive visualizations to transform operational data into actionable business insights.
 
+The report is designed for executive decision-making and enables users to explore operational performance through interactive filtering, drill-down analysis and report page tooltips.
+
 ---
 
 # 🏠 Dashboard 1 — Executive Overview
@@ -744,7 +746,7 @@ cd Fabric/Airlines
 
 ### 3. Generate the Datasets
 
-Execute the Python scripts inside the **Script** folder.
+Execute all Python scripts inside the **Script** directory to generate the synthetic airline datasets.
 
 ### 4. Upload Data
 
@@ -793,8 +795,8 @@ Aspiring Data Engineer passionate about building modern analytics platforms usin
 
 ### Connect With Me
 
-- 🔗 GitHub: https://github.com/Aman2925
-- 💼 LinkedIn: https://www.linkedin.com/in/aman-shah-546775255/
+- 💻 **GitHub:** [Aman2925](https://github.com/Aman2925)
+- 💼 **LinkedIn:** [Aman Shah](https://www.linkedin.com/in/aman-shah-546775255/)
 
 ---
 
